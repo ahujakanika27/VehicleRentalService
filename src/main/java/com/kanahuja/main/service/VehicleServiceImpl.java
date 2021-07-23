@@ -1,9 +1,9 @@
-package com.kanahuja.main.model.service;
+package com.kanahuja.main.service;
 
-import com.kanahuja.main.model.repository.VehicleRepository;
+import com.kanahuja.main.repository.VehicleRepository;
 import com.kanahuja.main.model.reservation.VehicleInventory;
 import com.kanahuja.main.model.vehicle.HireableVehicle;
-import com.kanahuja.main.model.repository.VehicleInventoryRepository;
+import com.kanahuja.main.repository.VehicleInventoryRepository;
 
 public class VehicleServiceImpl implements VehicleInterface{
     VehicleRepository vehicleRepository = new VehicleRepository();

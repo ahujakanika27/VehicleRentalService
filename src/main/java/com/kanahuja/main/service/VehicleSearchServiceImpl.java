@@ -1,6 +1,6 @@
-package com.kanahuja.main.model.service;
+package com.kanahuja.main.service;
 
-import com.kanahuja.main.model.repository.VehicleInventoryRepository;
+import com.kanahuja.main.repository.VehicleInventoryRepository;
 import com.kanahuja.main.model.vehicle.HireableVehicle;
 import com.kanahuja.main.model.vehicle.VehicleType;
 

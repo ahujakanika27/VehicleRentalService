@@ -1,4 +1,4 @@
-package com.kanahuja.main.model.service;
+package com.kanahuja.main.service;
 
 import com.kanahuja.main.model.vehicle.HireableVehicle;
 

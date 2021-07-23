@@ -1,4 +1,4 @@
-package com.kanahuja.main.model.repository;
+package com.kanahuja.main.repository;
 
 import com.kanahuja.main.model.reservation.VehicleInventory;
 

@@ -1,4 +1,4 @@
-package com.kanahuja.main.model.exceptions;
+package com.kanahuja.main.exceptions;
 
 public class InvalidVehicleIdException extends Exception {
     public InvalidVehicleIdException(String message) {

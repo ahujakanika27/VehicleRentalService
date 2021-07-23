@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 @Setter
 public class VehicleReservation {
     private String reservationId;
-    private String usrId;
     private LocalDateTime reservationDate;
     private ReservationStatus status;
     private LocalDateTime fromDate;
