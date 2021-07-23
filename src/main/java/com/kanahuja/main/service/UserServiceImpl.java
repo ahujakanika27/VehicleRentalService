@@ -1,6 +1,5 @@
 package com.kanahuja.main.service;
 
-import com.kanahuja.main.repository.VehicleInventoryRepository;
 import com.kanahuja.main.repository.VehicleReservationRepository;
 import com.kanahuja.main.model.reservation.ReservationStatus;
 import com.kanahuja.main.model.reservation.VehicleReservation;
@@ -12,10 +11,9 @@ import java.util.HashMap;
 import java.util.UUID;
 
 
-public class UserServiceImpl extends UserService{
+public class UserServiceImpl implements UserService{
     VehicleReservationRepository vehicleReservationRepository = new
             VehicleReservationRepository();
-    VehicleInventoryRepository vehicleInventoryRepository = new VehicleInventoryRepository();
     HashMap<String, String> branchMap = new HashMap<>();
 
     @Override
@@ -38,6 +36,7 @@ public class UserServiceImpl extends UserService{
         vehicleReservation.setVehicleReservationType(VehicleReservationType.HOURLY);
         vehicleReservation.setVehicleType(vt);
         vehicleReservation.setVehicleReservationType(VehicleReservationType.HOURLY);
+        vehicleReservation = vehicleReservationRepository.reserve(vehicleReservation);
         return vehicleReservation;
     }
 
