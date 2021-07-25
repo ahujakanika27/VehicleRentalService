@@ -1,16 +1,20 @@
 package com.kanahuja.main.model.reservation;
 
 import com.kanahuja.main.model.vehicle.VehicleType;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.util.HashMap;
-import java.util.Map;
-
+@Getter
+@Setter
 public class VehicleHourlyCosts {
-    public static Map<VehicleType, Double> vehicleHourlyCost = new HashMap<>();
+    private VehicleType vt;
+    private int price;
 
-    static {
-        vehicleHourlyCost.put(VehicleType.HATCHBACK, 50.0);
-        vehicleHourlyCost.put(VehicleType.SEDAN, 150.0);
-        vehicleHourlyCost.put(VehicleType.SUV, 200.0);
+    public VehicleHourlyCosts() {
+    }
+
+    public VehicleHourlyCosts(VehicleType vt, int price) {
+        this.vt = vt;
+        this.price = price;
     }
 }

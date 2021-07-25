@@ -4,9 +4,21 @@ import lombok.Getter;
 import lombok.Setter;
 @Getter
 @Setter
-public abstract class HireableVehicle {
+
+public class HireableVehicle {
     private String id;
-    private VehicleStatus vehicleStatus;
     private VehicleType vehicleType;
     private String branchName;
+    private VehicleStatus vehicleStatus = VehicleStatus.AVAILALBE;
+
+    public HireableVehicle(String id, VehicleType vehicleType, String branchName) {
+        this.id = id;
+        this.vehicleType = vehicleType;
+        this.branchName = branchName;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(id + " branch name: " + branchName+ " for type: "+vehicleType);
+    }
 }
